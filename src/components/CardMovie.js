@@ -9,10 +9,8 @@ class CardMovie extends React.Component{
     }
 
     handelChangeSwitch = (id) =>{
-        console.log('handelChangeSwitch = ', id);
     };
     handelRemove = (id) => {
-        console.log('delete Movie -1 = ', this.props);
         this.props.deleteMovie(id, this.props.movies);
     };
 

@@ -12,12 +12,6 @@ class ListOfMovies extends React.Component{
     }
 
     componentWillUpdate(newState){
-        console.log('componentWillUpdate this.props.movies - 2 = ', this.props.movies);
-        console.log('componentWillUpdate newState.movies - 2 = ', newState.movies);
-        /*if (this.props.movies && this.props.movies.movies && this.props.movies.movies.length !== newState.movies.movies.length){
-            console.log('componentWillUpdate = ', this.props.movies.movies.length,newState.movies.movies.length);
-
-        }*/
         if ( (this.props.movies.moviesPerPage !== newState.movies.moviesPerPage) || (this.props.movies.currentPage !== newState.movies.currentPage)){
             this.props.getMovies(newState.movies.currentPage, newState.movies.moviesPerPage);
         }
